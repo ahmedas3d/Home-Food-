@@ -64,21 +64,9 @@ class _OrderDetailsFormState extends State<OrderDetailsForm> {
                 //`selectedDate` the new date selected.
               },
               activeColor: AppColor.primaryColor,
-              headerProps: const EasyHeaderProps(
-                monthPickerType: MonthPickerType.switcher,
-                dateFormatter: DateFormatter.fullDateDayAsStrMY(),
-              ),
               dayProps: const EasyDayProps(
-                activeDayStyle: DayStyle(
-                  borderRadius: 32.0,
-                ),
-                inactiveDayStyle: DayStyle(
-                  borderRadius: 32.0,
-                ),
-              ),
-              timeLineProps: const EasyTimeLineProps(
-                hPadding: 16.0, // padding from left and right
-                separatorPadding: 16.0, // padding between days
+                todayHighlightStyle: TodayHighlightStyle.withBackground,
+                todayHighlightColor: Colors.black,
               ),
             ),
             SizedBox(height: 25,),
