@@ -67,14 +67,14 @@ class Settings extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Card(
-              color: AppColor.white.withOpacity(0.2),
+              color: AppColor.white,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   ListTile(
                     title: Text(
                       "language".tr,
-                      style: const TextStyle(color: AppColor.black),
+                      style: const TextStyle(color: AppColor.black,fontWeight: FontWeight.w400,fontSize: 18),
                     ),
                     onTap: () {
                       showModalBottomSheet(
@@ -149,14 +149,11 @@ class Settings extends StatelessWidget {
                       color: AppColor.black,
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                    color: AppColor.black,
-                  ),
+                  SizedBox(height: 10,),
                   ListTile(
                     title: Text(
                       "orders".tr,
-                      style: const TextStyle(color: AppColor.black),
+                      style: const TextStyle(color: AppColor.black,fontWeight: FontWeight.w400,fontSize: 18),
                     ),
                     onTap: () {
                       Get.toNamed(AppRoute.ordersPending);
@@ -166,14 +163,11 @@ class Settings extends StatelessWidget {
                       color: AppColor.black,
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                    color: AppColor.black,
-                  ),
+                  SizedBox(height: 10,),
                   ListTile(
                     title: Text(
                       '${translateDataBase("الارشيف", "Archive")}',
-                      style: const TextStyle(color: AppColor.black),
+                      style: const TextStyle(color: AppColor.black,fontWeight: FontWeight.w400,fontSize: 18),
                     ),
                     onTap: () {
                       Get.toNamed(AppRoute.ordersArchive);
@@ -183,14 +177,11 @@ class Settings extends StatelessWidget {
                       color: AppColor.black,
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                    color: AppColor.black,
-                  ),
+                  SizedBox(height: 10,),
                   ListTile(
                     title: Text(
                       "address".tr,
-                      style: const TextStyle(color: AppColor.black),
+                      style: const TextStyle(color: AppColor.black,fontWeight: FontWeight.w400,fontSize: 18),
                     ),
                     onTap: () {
                       Get.toNamed(AppRoute.addressView);
@@ -200,15 +191,12 @@ class Settings extends StatelessWidget {
                       color: AppColor.black,
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                    color: AppColor.black,
-                  ),
+                  SizedBox(height: 10,),
                   ListTile(
                     tileColor:Colors.transparent,
                     title: Text(
                       "logout".tr,
-                      style: const TextStyle(color: AppColor.black),
+                      style: const TextStyle(color: AppColor.black,fontWeight: FontWeight.w400,fontSize: 18),
                     ),
                     onTap: () {
                       controller.logout();
@@ -243,6 +231,12 @@ class Settings extends StatelessWidget {
                     onPressed: () {
                       whatsapp();
                     }),
+                buildMedia(
+                    icon: FontAwesome.instagram,
+                    text: "Instagram".tr,
+                    onPressed: () {
+                      whatsapp();
+                    }),
               ],
             ),
           ),
@@ -256,22 +250,22 @@ class Settings extends StatelessWidget {
 }
 
 whatsapp() async {
-  const url = "whatsapp://send?phone=+2001000615819";
+  const url = "whatsapp://send?phone=+2001014781603";
   await launch(url);
 }
 
 facebook() async {
-  const url = 'https://www.facebook.com/abdallh2002/';
+  const url = 'https://www.facebook.com/ahmed.asaad.3434/';
   await launch(url);
 }
 
 instagram() async {
-  const url = 'https://www.instagram.com/abdalluh_essam_22/';
+  const url = 'https://www.instagram.com/ahmedasaaaaad/';
   await launch(url);
 }
 
 webSite() async {
-  const url = 'https://www.instagram.com/abdalluh_essam_22/';
+  const url = 'https://www.instagram.com/ahmedasaaaaad/';
   await launch(url);
 }
 
