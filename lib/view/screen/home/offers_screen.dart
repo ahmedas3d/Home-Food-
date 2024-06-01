@@ -16,7 +16,9 @@ class OffersView extends StatelessWidget {
     Get.put(OffersControllerImp());
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 0,
+        toolbarHeight: 80,
+        centerTitle: true,
+        title: Text('Chefs'),
       ),
       body: GetBuilder<OffersControllerImp>(
           builder: (controller) => Padding(
@@ -24,22 +26,22 @@ class OffersView extends StatelessWidget {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                CustomAppBar(
-                  onPressedIconFavorite: () {
-                    Get.toNamed(AppRoute.myFavorite);
-                  },
-                  titleAppBar:"${translateDataBase("ابحث عن الشيف", "Find Chef")}".tr,
-                  onPressedSearch: () {
-                    controller.onSearchItems();
-                  },
-                  onChanged: (val) {
-                    controller.checkSearch(val);
-                  },
-                  myController: controller.search!,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                // CustomAppBar(
+                //   onPressedIconFavorite: () {
+                //     Get.toNamed(AppRoute.myFavorite);
+                //   },
+                //   titleAppBar:"${translateDataBase("ابحث عن الشيف", "Find Chef")}".tr,
+                //   onPressedSearch: () {
+                //     controller.onSearchItems();
+                //   },
+                //   onChanged: (val) {
+                //     controller.checkSearch(val);
+                //   },
+                //   myController: controller.search!,
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 HandlingDataView(
                     statusRequest: controller.statusRequest,
                     widget: !controller.isSearch == true
