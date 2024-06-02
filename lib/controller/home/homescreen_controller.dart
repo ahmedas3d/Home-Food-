@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:home_food/view/screen/Location.dart';
 import 'package:home_food/view/screen/home/home.dart';
 import 'package:home_food/view/screen/home/notification_screen.dart';
 import 'package:home_food/view/screen/home/offers_screen.dart';
@@ -22,7 +23,8 @@ class HomeScreenControllerImp extends HomeScreenController {
   List<Widget> listPage = [
     const HomePage(),
     const NotificationScreen(),
-    const OffersView(),
+    GovernoratesScreen(),
+    // const OffersView(),
     const Settings(),
   ];
   List bottomAppBar = [

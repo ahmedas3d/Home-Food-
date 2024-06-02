@@ -16,8 +16,8 @@ class MySplashScreen extends StatefulWidget {
 
 class _MySplashScreenState extends State<MySplashScreen> {
   startTimer() {
-   Timer(const Duration(seconds:2), () async {
-     await Get.offAllNamed(AppRoute.homeScreen);
+    Timer(const Duration(seconds: 2), () async {
+      await Get.offAllNamed(AppRoute.homeScreen);
     });
   }
 
@@ -52,7 +52,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
               const Spacer(),
 
               Text(
-                "Home Food | ©2023",
+                "Home Food | ©2024",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Theme.of(context)
