@@ -57,7 +57,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
                 style: TextStyle(
                   color: Theme.of(context)
                       .textTheme
-                      .bodyText1!
+                      .bodyLarge!
                       .color!
                       .withOpacity(0.6),
                 ),
